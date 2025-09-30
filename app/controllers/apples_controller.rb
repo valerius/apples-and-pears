@@ -3,7 +3,8 @@ class ApplesController < ApplicationController
 
   # GET /apples or /apples.json
   def index
-    @apples = Apple.all
+    @apples = policy_scope(Apple)
+    authorize @apples
   end
 
   # GET /apples/1 or /apples/1.json
@@ -13,6 +14,7 @@ class ApplesController < ApplicationController
   # GET /apples/new
   def new
     @apple = Apple.new
+    authorize @apple
   end
 
   # GET /apples/1/edit
@@ -22,6 +24,7 @@ class ApplesController < ApplicationController
   # POST /apples or /apples.json
   def create
     @apple = Apple.new(apple_params)
+    authorize @apple
 
     respond_to do |format|
       if @apple.save
@@ -61,6 +64,7 @@ class ApplesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_apple
       @apple = Apple.find(params.expect(:id))
+      authorize @apple
     end
 
     # Only allow a list of trusted parameters through.

@@ -3,7 +3,8 @@ class PearsController < ApplicationController
 
   # GET /pears or /pears.json
   def index
-    @pears = Pear.all
+    @pears = policy_scope(Pear)
+    authorize @pears
   end
 
   # GET /pears/1 or /pears/1.json
@@ -13,6 +14,7 @@ class PearsController < ApplicationController
   # GET /pears/new
   def new
     @pear = Pear.new
+    authorize @pear
   end
 
   # GET /pears/1/edit
@@ -22,6 +24,7 @@ class PearsController < ApplicationController
   # POST /pears or /pears.json
   def create
     @pear = Pear.new(pear_params)
+    authorize @pear
 
     respond_to do |format|
       if @pear.save
@@ -61,6 +64,7 @@ class PearsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_pear
       @pear = Pear.find(params.expect(:id))
+      authorize @pear
     end
 
     # Only allow a list of trusted parameters through.

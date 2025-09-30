@@ -13,4 +13,4 @@
   <% end %>
 </div>
 
-<%= link_to "New apple", new_apple_path %>
+<%= link_to "New apple", new_apple_path if policy(Apple).new? %>

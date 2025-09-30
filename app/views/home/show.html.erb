@@ -1,4 +1,4 @@
 <h1>Welcome to Apples and Pears</h1>
 
-<%= link_to "Apples", apples_path %><br>
-<%= link_to "Pears", pears_path %>
+<%= link_to "Apples", apples_path if policy(Apple).index? %><br>
+<%= link_to "Pears", pears_path if policy(Pear).index? %>
