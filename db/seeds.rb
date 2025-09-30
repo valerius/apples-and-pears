@@ -12,3 +12,6 @@ apple_intern = User.create! email_address: "apple_intern@example.com", password:
 apple_consultant = User.create! email_address: "apple_consultant@example.com", password: "testtest", role: "apple_consultant"
 pear_consultant = User.create! email_address: "pear_consultant@example.com", password: "testtest", role: "pear_consultant"
 admin = User.create! email_address: "admin@example.com", password: "testtest", role: "admin"
+
+Apple.create! name: "Granny Smith", size: "small"
+Apple.create! name: "Golden Delicious", size: "large"

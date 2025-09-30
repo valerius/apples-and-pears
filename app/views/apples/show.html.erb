@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @apple %>
+
+<div>
+  <%= link_to "Edit this apple", edit_apple_path(@apple) %> |
+  <%= link_to "Back to apples", apples_path %>
+
+  <%= button_to "Destroy this apple", @apple, method: :delete %>
+</div>

@@ -1,0 +1,11 @@
+<% content_for :title, "New apple" %>
+
+<h1>New apple</h1>
+
+<%= render "form", apple: @apple %>
+
+<br>
+
+<div>
+  <%= link_to "Back to apples", apples_path %>
+</div>
