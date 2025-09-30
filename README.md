@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Why was this repo created?
 
-Things you may want to cover:
+To show you, in the most simple way, how Pundit works.
 
-* Ruby version
+## How does Pundit work?
 
-* System dependencies
+Check out commit https://github.com/valerius/apples-and-pears/commit/7398d5e704e079ce66d733082fffa8873c45efbe.
 
-* Configuration
+You essentially define policies (what actions can I perform?) and scopes (What records can I see?) for each model. Each resource/model/service/"thing" you have constructed a controller around should have its own Policy class.
 
-* Database creation
+## Where can I learn more about Pundit?
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://github.com/varvet/pundit
