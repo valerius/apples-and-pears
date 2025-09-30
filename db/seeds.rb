@@ -15,3 +15,5 @@ admin = User.create! email_address: "admin@example.com", password: "testtest", r
 
 Apple.create! name: "Granny Smith", size: "small"
 Apple.create! name: "Golden Delicious", size: "large"
+
+Pear.create! name: "Conference"

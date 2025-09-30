@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pears
   resources :apples
   resource :session
   resources :passwords, param: :token

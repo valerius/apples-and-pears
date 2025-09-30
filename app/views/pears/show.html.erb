@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @pear %>
+
+<div>
+  <%= link_to "Edit this pear", edit_pear_path(@pear) %> |
+  <%= link_to "Back to pears", pears_path %>
+
+  <%= button_to "Destroy this pear", @pear, method: :delete %>
+</div>
