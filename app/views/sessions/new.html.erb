@@ -8,4 +8,9 @@
 <% end %>
 <br>
 
+<% User.all.each do |user| %>
+  <%= user.email_address %><br>
+<% end %>
+Password: testtest<br>
+
 <%= link_to "Forgot password?", new_password_path %>

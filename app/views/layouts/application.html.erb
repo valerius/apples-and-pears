@@ -23,6 +23,8 @@
   </head>
 
   <body>
+    <%= Current.user.inspect %>
+    <%= button_to "Sign out", session_path, method: :delete %>
     <%= yield %>
   </body>
 </html>
